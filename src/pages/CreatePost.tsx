@@ -1,24 +1,42 @@
 import React from 'react';
-import Cover from '../components/Cover';
-import Banner from '../components/Banner';
-import { Link } from 'react-router-dom';
-import Services from '../components/Services';
-import FeaturedRooms from '../components/FeaturedRooms';
+import {Container, Form, Button} from 'react-bootstrap';
 
 const CreatePost: React.FC = () => {
     return (
-        <React.Fragment>
-            <Cover>
-                <Banner
-                title="luxurious rooms"
-                subtitle="deluxe rooms starting at $299"
-                >
-                <Link to="/rooms" className="btn-primary">create post</Link>
-                </Banner>
-            </Cover>
-            <Services/>
-            <FeaturedRooms />
-        </React.Fragment>
+      <Container>
+      <br/>
+      <br/>
+      <Form>
+        <Form.Group controlId="formBasicText">
+        <Form.Label>Hotel Name</Form.Label>
+        <Form.Control type="text" placeholder="Hotel Name" />
+        </Form.Group>
+        <Form.Group controlId="formBasicText">
+        <Form.Label>Description</Form.Label>
+        <Form.Control type="text" placeholder="Description" />
+        </Form.Group>
+        <Form.Group controlId="formBasicText">
+        <Form.Label>Type</Form.Label>
+        <Form.Control type="text" placeholder="Type" />
+        </Form.Group>
+        <Form.Group controlId="formBasicNumber">
+        <Form.Label>Price</Form.Label>
+        <Form.Control type="number" placeholder="Price" />
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+        <Form.Label>Confirm Password</Form.Label>
+        <Form.Control type="password" placeholder="Confirm Password" />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+        Register
+        </Button>
+        </Form>
+      </Container>
     )
 }
 
